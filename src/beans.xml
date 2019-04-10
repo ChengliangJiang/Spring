@@ -6,7 +6,14 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
 
 
     <!-- 配置一个bean 【对象】-->
-    <bean id="userService" class="com.jcl.service.IuserServiceImpl">
+    <bean id="userService" class="com.jcl.service.IUserServiceImpl">
         <!-- 依赖注入数据，调用属性的set方法 -->
+        <property name="name" value="zhangsan" />
+    </bean>
+    <!--构造方法给属性赋值-->
+    <bean id="user" class="com.jcl.model.User">
+        <constructor-arg name="name" value="jcl" />
+        <constructor-arg name="password" value="111" />
+        <!--constructor-arg name="age" value="000" /-->
     </bean>
 </beans>

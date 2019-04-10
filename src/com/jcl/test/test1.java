@@ -2,8 +2,7 @@ package com.jcl.test;
 
 
 import com.jcl.service.IUserService;
-import com.jcl.service.IuserServiceImpl;
-import javafx.application.Application;
+import com.jcl.service.IUserServiceImpl;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,7 +13,7 @@ public class test1 {
      */
     @Test
     public void demo1(){
-        IUserService UserService=new IuserServiceImpl();
+        IUserService UserService=new IUserServiceImpl();
         UserService.add();
     }
     //现在使用spring的IOC容器获取
