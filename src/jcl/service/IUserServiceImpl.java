@@ -1,12 +1,15 @@
-package com.jcl.service;
+package jcl.service;
 
-import com.jcl.dao.IUserDao;
-import com.jcl.model.User;
+import jcl.dao.IUserDao;
+import jcl.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class IUserServiceImpl implements IUserService {
 
+    @Autowired
     private IUserDao userDao;
     private String name;
 
@@ -29,13 +32,5 @@ public class IUserServiceImpl implements IUserService {
         System.out.println("service添加用户"+user);
         //调用dao
         userDao.add(user);
-    }
-
-    public IUserDao getUserDao() {
-        return userDao;
-    }
-
-    public void setUserDao(IUserDao userDao) {
-        this.userDao = userDao;
     }
 }

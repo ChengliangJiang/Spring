@@ -1,6 +1,6 @@
-package com.jcl.service;
+package jcl.service;
 
-import com.jcl.model.User;
+import jcl.model.User;
 
 public interface IUserService {
     public void add();
